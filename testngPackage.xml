@@ -5,6 +5,7 @@
     <test name="Smoke testcases">
         <packages>
             <package name="TestNGFiles"/>
+            <package name="Test"/>
         </packages>
     </test>
 
