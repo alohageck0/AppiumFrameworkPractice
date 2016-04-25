@@ -3,11 +3,9 @@
 
 <suite name="Automation test">
     <test name="Smoke testcases">
-        <classes>
-            <!--<class name="TestNGFiles.Anot2"/>-->
-            <class name="TestNGFiles.Annotations"/>
-            <class name="Test.Annotations"/>
-        </classes>
+        <packages>
+            <package name="TestNGFiles"/>
+        </packages>
     </test>
 
 </suite>
