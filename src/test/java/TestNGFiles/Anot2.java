@@ -2,6 +2,7 @@ package TestNGFiles;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 
 public class Anot2 {
    @BeforeSuite
@@ -12,5 +13,10 @@ public class Anot2 {
    @AfterSuite
    public void Uninstall(){
       System.out.println("Delete application");
+   }
+
+   @Test
+   public void ThisIsTest(){
+      System.out.println("Test run");
    }
 }
