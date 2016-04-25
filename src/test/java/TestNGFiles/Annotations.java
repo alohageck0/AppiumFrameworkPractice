@@ -1,9 +1,6 @@
 package TestNGFiles;
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class Annotations {
    @BeforeTest
@@ -18,6 +15,10 @@ public class Annotations {
    @BeforeMethod
    public void UserIDGeneration() {
       System.out.println("generate ID");
+   }
+   @AfterMethod
+   public void DeleteUser(){
+      System.out.println("Report adding");
    }
 
 
