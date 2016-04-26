@@ -70,7 +70,7 @@ public class PracticeApp {
 
    }
 
-      @Test
+//      @Test
    public void Pickers() {
       TouchAction touchAction = new TouchAction(driver);
       //Open pickers screen
@@ -111,5 +111,9 @@ public class PracticeApp {
       //TBD
 
 
+   }
+   @Test
+   public void PrintHere(){
+      System.out.println("PrintTest");
    }
 }

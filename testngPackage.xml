@@ -4,8 +4,7 @@
 <suite name="Automation test">
     <test name="Smoke testcases">
         <packages>
-            <package name="TestNGFiles"/>
-            <package name="Test"/>
+            <package name="_iOSappPractice"/>
         </packages>
     </test>
 

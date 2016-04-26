@@ -26,17 +26,17 @@ public class PracticeApp {
 
    @BeforeMethod
    public void setUp() throws MalformedURLException {
-//      serverArguments = new ServerArguments();
-//      serverArguments.setArgument("--address", "127.0.0.1");
-//
-////      serverArguments.setArgument("--no-reset", true);
-//
-//      serverArguments.setArgument("--local-timezone", true);
-//      serverArguments.setArgument("--device-ready-timeout", "10");
-//      appiumServer = new AppiumServer(serverArguments);
-//      appiumServer.startServer();
+      serverArguments = new ServerArguments();
+      serverArguments.setArgument("--address", "127.0.0.1");
 
-//      capabilities.setCapability("waitForAppScript", "$.delay(3000); $.acceptAlert();");
+//      serverArguments.setArgument("--no-reset", true);
+
+      serverArguments.setArgument("--local-timezone", true);
+      serverArguments.setArgument("--device-ready-timeout", "10");
+      appiumServer = new AppiumServer(serverArguments);
+      appiumServer.startServer();
+
+      capabilities.setCapability("waitForAppScript", "$.delay(3000); $.acceptAlert();");
       capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "5");
       capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
       capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.3");
@@ -49,7 +49,7 @@ public class PracticeApp {
 
    @AfterMethod
    public void cleanUp() {
-//      appiumServer.stopServer();
+      appiumServer.stopServer();
 
    }
 
@@ -70,7 +70,7 @@ public class PracticeApp {
 
    }
 
-      @Test
+   @Test
    public void Pickers() {
       TouchAction touchAction = new TouchAction(driver);
       //Open pickers screen
@@ -87,7 +87,7 @@ public class PracticeApp {
 
    }
 
-//   @Test
+   //   @Test
    public void Alerts() throws InterruptedException {
       TouchAction touchAction = new TouchAction(driver);
       //Open Alerts screen
@@ -111,5 +111,10 @@ public class PracticeApp {
       //TBD
 
 
+   }
+
+   @Test
+   public void PrintFromPractice() {
+      System.out.println("Print another one");
    }
 }
