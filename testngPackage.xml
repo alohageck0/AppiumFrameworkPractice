@@ -6,7 +6,6 @@
         <packages>
             <package name="TestNGFiles"/>
             <package name="Test"/>
-            <package name="Testtt"/>
         </packages>
     </test>
 
