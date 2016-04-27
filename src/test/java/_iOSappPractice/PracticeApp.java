@@ -9,10 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -37,6 +34,7 @@ public class PracticeApp {
       appiumServer = new AppiumServer(serverArguments);
    }
 
+
    @BeforeMethod
    public void setUp() throws MalformedURLException {
       System.out.println("BeforeMethod exec");
@@ -54,6 +52,7 @@ public class PracticeApp {
 
    @AfterMethod
    public void cleanUp() {
+      driver.quit();
       appiumServer.stopServer();
 
    }
