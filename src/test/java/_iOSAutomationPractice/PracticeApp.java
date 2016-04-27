@@ -9,8 +9,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -24,7 +22,7 @@ public class PracticeApp {
    private ServerArguments serverArguments = new ServerArguments();
    private AppiumServer appiumServer;
 
-   @BeforeMethod
+//   @BeforeMethod
    public void setUp() throws MalformedURLException {
 //      serverArguments = new ServerArguments();
 //      serverArguments.setArgument("--address", "127.0.0.1");
@@ -47,7 +45,7 @@ public class PracticeApp {
 
    }
 
-   @AfterMethod
+//   @AfterMethod
    public void cleanUp() {
 //      appiumServer.stopServer();
 

@@ -5,6 +5,7 @@
     <test name="Smoke testcases">
         <classes>
             <class name="_iOSAutomationPractice.PracticeApp"/>
+            <class name="_iOSappPractice.PracticeApp"/>
         </classes>
     </test>
 

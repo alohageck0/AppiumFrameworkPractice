@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -24,18 +25,22 @@ public class PracticeApp {
    private ServerArguments serverArguments = new ServerArguments();
    private AppiumServer appiumServer;
 
-   @BeforeMethod
-   public void setUp() throws MalformedURLException {
+
+   @BeforeSuite
+   public void BeforeAllTests() {
+      System.out.println("Hi, this is first method");
       serverArguments = new ServerArguments();
       serverArguments.setArgument("--address", "127.0.0.1");
-
 //      serverArguments.setArgument("--no-reset", true);
-
       serverArguments.setArgument("--local-timezone", true);
       serverArguments.setArgument("--device-ready-timeout", "10");
       appiumServer = new AppiumServer(serverArguments);
-      appiumServer.startServer();
+   }
 
+   @BeforeMethod
+   public void setUp() throws MalformedURLException {
+      System.out.println("BeforeMethod exec");
+      appiumServer.startServer();
       capabilities.setCapability("waitForAppScript", "$.delay(3000); $.acceptAlert();");
       capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "5");
       capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
@@ -53,7 +58,7 @@ public class PracticeApp {
 
    }
 
-   //   @Test
+      @Test
    public void Switchers() {
       TouchAction touchAction = new TouchAction(driver);
       touchAction.tap(driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]"))).perform();
@@ -70,7 +75,7 @@ public class PracticeApp {
 
    }
 
-   @Test
+      @Test
    public void Pickers() {
       TouchAction touchAction = new TouchAction(driver);
       //Open pickers screen
