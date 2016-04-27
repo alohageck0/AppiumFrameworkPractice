@@ -42,6 +42,12 @@
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
+                    <plugin>
+                        <inherited>true</inherited>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.3</version>
+                    </plugin>
 
                 </plugins>
             </build>
@@ -51,11 +57,7 @@
 
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.3</version>
-        </dependency>
+
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
