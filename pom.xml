@@ -46,6 +46,7 @@
                         <inherited>true</inherited>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
+                        <version>RELEASE</version>
                     </plugin>
                 </plugins>
             </build>
