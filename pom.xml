@@ -42,8 +42,6 @@
                         <configuration>
                             <suiteXmlFiles>
                                 <suiteXmlFile>testng.xml</suiteXmlFile>
-                                <suiteXmlFile>testngPackage.xml</suiteXmlFile>
-
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
