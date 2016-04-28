@@ -7,11 +7,15 @@ import org.testng.annotations.Test;
 
 public class Login {
    @Test
-   public void Login() {
+   public void testLogin() {
       System.setProperty("webdriver.chrome.driver", "/Users/royalfiish/bin/chromedriver");
       WebDriver driver = new ChromeDriver();
-      driver.get("http://rediff.com");
-      RediffLoginPage rd = new RediffLoginPage(driver);
+      driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
+      RediffLoginPage loginPage = new RediffLoginPage(driver);
+      loginPage.emailID().click();
+      loginPage.emailID().sendKeys("Framework");
+      loginPage.password().sendKeys("Password");
+      loginPage.submit().click();
 
    }
 }
