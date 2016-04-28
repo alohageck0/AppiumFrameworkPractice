@@ -16,6 +16,7 @@ public class RediffLoginPage {
    private By username = new By.ByXPath("//*[@id=\"login1\"]");
    private By password = new By.ByName("passwd");
    private By goButton = new By.ByName("proceed");
+   private By home = new By.ByLinkText("Home");
 
    public WebElement emailID() {
       return driver.findElement(username);
@@ -27,6 +28,10 @@ public class RediffLoginPage {
 
    public WebElement submit() {
       return driver.findElement(goButton);
+   }
+
+   public WebElement home() {
+      return driver.findElement(home);
    }
 
 }
