@@ -114,8 +114,5 @@ public class PracticeApp {
    public void PrintHere(){
       System.out.println("**** This is our print testcase ****");
    }
-   @Test
-   public void PrintHere1(){
-      System.out.println("**** This is our print testcase one more ****");
-   }
+
 }
