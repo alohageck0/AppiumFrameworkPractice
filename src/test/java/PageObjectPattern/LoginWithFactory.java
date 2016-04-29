@@ -1,7 +1,7 @@
 package PageObjectPattern;
 
-import ObjectRepo.RediffHomePage;
-import ObjectRepo.RediffLoginPage;
+import PageObjectFactory.RediffHomePage;
+import PageObjectFactory.RediffLoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
-public class Login {
+public class LoginWithFactory {
    private WebDriver driver;
 
    @BeforeTest
@@ -18,8 +18,9 @@ public class Login {
       driver = new ChromeDriver();
 
    }
+
    @AfterSuite
-   public void cleanUp(){
+   public void cleanUp() {
       driver.quit();
    }
 
