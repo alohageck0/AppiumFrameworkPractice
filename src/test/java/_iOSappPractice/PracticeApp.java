@@ -50,7 +50,7 @@ public class PracticeApp {
 
    }
 
-   @AfterMethod
+//   @AfterMethod
    public void cleanUp() {
       driver.quit();
       appiumServer.stopServer();
