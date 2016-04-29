@@ -1,5 +1,6 @@
 package PageObjectPattern;
 
+import ObjectRepo.RediffHomePage;
 import ObjectRepo.RediffLoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -33,6 +34,8 @@ public class Login {
       driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
       RediffLoginPage loginPage = new RediffLoginPage(driver);
       loginPage.home().click();
-
+      RediffHomePage homePage = new RediffHomePage(driver);
+      homePage.search().sendKeys("Test search");
+      homePage.searchButton().click();
    }
 }

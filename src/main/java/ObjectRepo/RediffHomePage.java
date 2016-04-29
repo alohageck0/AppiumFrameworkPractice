@@ -14,10 +14,14 @@ public class RediffHomePage {
    }
 
    private By searchFireld = new By.ByName("srchword");
-
+   private By searchButton = new By.ByXPath("//*[@id=\"queryTop\"]/div/input[6]");
 
    public WebElement search() {
       return driver.findElement(searchFireld);
+   }
+
+   public WebElement searchButton() {
+      return driver.findElement(searchButton);
    }
 
 }
