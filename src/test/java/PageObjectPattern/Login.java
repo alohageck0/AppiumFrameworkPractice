@@ -4,6 +4,7 @@ import ObjectRepo.RediffHomePage;
 import ObjectRepo.RediffLoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -15,6 +16,10 @@ public class Login {
       System.setProperty("webdriver.chrome.driver", "/Users/royalfiish/bin/chromedriver");
       driver = new ChromeDriver();
 
+   }
+   @AfterSuite
+   public void cleanUp(){
+      driver.quit();
    }
 
    @Test
